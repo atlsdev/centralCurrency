@@ -2,3 +2,36 @@ html {
 	font-family: Poppins, sans-serif;
 	background-color: #121212;
 }
+
+body {
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	background-color: #913CE6;
+	flex-direction: row-reverse;
+}
+
+.navItem {
+	padding: 15px;
+}
+
+.navItem:hover {
+	color: #EBEBEB;
+	background-color: #8135CC; 
+	cursor: pointer;
+}
+
+.main {
+	padding: 50px;
+}

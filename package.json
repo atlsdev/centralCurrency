@@ -1,0 +1,26 @@
+{
+  "name": "centralCurrency",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atlsdev/centralCurrency.git"
+  },
+  "keywords": [],
+  "author": "Atlas <atlas@twplayer.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atlsdev/centralCurrency/issues"
+  },
+  "homepage": "https://github.com/atlsdev/centralCurrency#readme"
+}
