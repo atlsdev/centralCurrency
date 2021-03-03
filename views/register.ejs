@@ -11,7 +11,7 @@
 			<% } %>
 		</div>
 		<div class="main">
-			<form name="login">
+			<form name="register">
 				<span class="errMsg"></span><br>
 				<label>EMail:</label><br>
 				<label>
@@ -23,19 +23,19 @@
 					<input type="password" name="password" placeholder="Password">
 				</label>
 				<br>
-				<input type="submit" value="Login">
+				<input type="submit" value="Register">
 			</form>
 		</div>
 		<script defer>
 			const qs = s => document.querySelector(s);
 
-			document.forms.login.onsubmit = e => {
+			document.forms.register.onsubmit = e => {
 				e.preventDefault();
 
 				var email = qs("input[name=\"email\"]").value;
 				var password = qs("input[name=\"password\"]").value;
 
-				$.post("/api/users/login", { email, pass: password }, data => {
+				$.post("/api/users/register", { email, pass: password }, data => {
 					console.log(data);
 					switch (data.status) {
 						case 200:

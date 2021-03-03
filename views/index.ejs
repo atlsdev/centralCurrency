@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<%- include("templates/head") %>
+		<%- include("templates/head", page) %>
 	</head>
 	<body>
 		<div class="nav">
 			<% if(user === null) { %>
+			<div class="navItem" id="register">Register</div>
 			<div class="navItem" id="login">Login</div>
 			<% } else { %>
-			<div class="navItem" id="genToken">Generate Token</div>
 			<div class="navItem" id="logout">Logout</div>
 			<% } %>
 		</div>
@@ -19,16 +19,22 @@
 		<script>
 			const qs = s => document.querySelector(s);
 
-			qs("#login").onclick = e => {
-				location.assign("/login");
+			if(qs("#login")) {
+				qs("#login").onclick = e => {
+					location.assign("/login");
+				}
 			}
 
-			qs("#genToken").onclick = e => {
-				location.assign("/generate");
+			if(qs("#register")) {
+				qs("#register").onclick = e => {
+					location.assign("/register");
+				}
 			}
 
-			qs("#logout").onclick = e => {
-				location.assign("/logout");
+			if(qs("#logout")) {
+				qs("#logout").onclick = e => {
+					location.assign("/logout");
+				}
 			}
 		</script>
 	</body>

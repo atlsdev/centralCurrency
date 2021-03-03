@@ -4,7 +4,7 @@ It's meant to be a Universal Currency for use in all of Atlas Dev's projects, su
   
 ## TODO
 - [x] Backend & API - Setup Base.
-- [ ] API - User Authentication.
+- [x] API - User Authentication.
+- [x] FrontEnd - Login Form.
+- [x] FrontEnd - Register Form.
 - [ ] API - Connecting accounts to other applications (MC, Twitch, Discord, etc).
-- [ ] FrontEnd - Login Form.
-- [ ] FrontEnd - Register Form.
