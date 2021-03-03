@@ -10,6 +10,7 @@ server.set("views", "./views");
 server.set('view engine', "ejs");
 server.use("/api/users", require("./routes/users"));
 server.use("/api/currency", require("./routes/currency"));
+server.use("/auth", require("./routes/auth"));
 
 server.get("/", (req, res) => {
 	if(req.session.user) {
@@ -30,14 +31,6 @@ server.get("/login", (req, res) => {
 server.get("/logout", (req, res) => {
 	if(req.session.user) {
 		req.session.destroy(_ => res.redirect("/"));
-	}
-});
-
-server.get("/generate", (req, res) => {
-	if(req.session.user) {
-		res.render("generate", { user: req.session.user });
-	} else {
-		res.redirect("/login");
 	}
 });
 
